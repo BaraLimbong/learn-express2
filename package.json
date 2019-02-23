@@ -1,0 +1,26 @@
+{
+  "name": "express2",
+  "version": "1.0.0",
+  "description": "learn-express2",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BaraLimbong/learn-express2.git"
+  },
+  "author": "baralimbong",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BaraLimbong/learn-express2/issues"
+  },
+  "homepage": "https://github.com/BaraLimbong/learn-express2#readme",
+  "dependencies": {
+    "express": "^4.16.4"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.10"
+  }
+}
