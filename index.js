@@ -58,15 +58,37 @@ app.post('/todos', (req, res) => {
       newTodo: newTodo,
       todos: todos
     })
+  } else {
+    res.send({
+      message: 'failed make to do list',
+      error: 'unnamed'
+    })
   }
 })
 
 app.delete('/todos/:id', (req, res) => {
   const id = Number(req.params.id)
-  todos = todos.filter(todo => todo.id !== id)
+  todos = todos.filter(doing => doing.id !== id)
   res.send({
     message: 'one todo has been deleted',
     id: id
+  })
+})
+app.put('/todos/:id', (req, res) => {
+  const id = Number(req.params.id)
+  const newTodo = req.body.todo
+  const newTodos = todos.map(doing => {
+    if (doing.id === id) {
+      doing.todo = newTodo
+      return doing
+    } else {
+      return doing
+    }
+  })
+  res.send({
+    message: 'one todo has been updated',
+    id: id,
+    newTodos: newTodos
   })
 })
 
